@@ -34,10 +34,12 @@ class PersonContainer extends Component {
       },
       errors: {},
     };
+    this.nameRef = React.createRef();
   }
 
   componentDidMount() {
     document.title = `Persons: ${this.state.persons.length}`;
+    this.nameRef.current._FocusName();
   }
 
   componentDidUpdate(PrevState) {
@@ -109,6 +111,8 @@ class PersonContainer extends Component {
         },
       });
     }
+
+    this.nameRef.current._FocusName();
   };
 
   _generateUserId(users) {
@@ -129,6 +133,7 @@ class PersonContainer extends Component {
           updateValue={this._UpdateValue}
           newPerson={newPerson}
           submitNewUser={this._submitNewUser}
+          ref={this.nameRef}
         />
       </>
     );

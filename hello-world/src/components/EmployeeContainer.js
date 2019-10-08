@@ -15,10 +15,12 @@ class EmployeeContainer extends Component {
       newEmployee: '',
       errors: {},
     };
+    this.textInput = React.createRef();
   }
 
   componentDidMount() {
     console.log('EmployeeContainer mount!');
+    this.textInput.current._focusTextInput();
   }
 
   _inputValid = newEmployee => {
@@ -61,7 +63,12 @@ class EmployeeContainer extends Component {
       <>
         <h1>{company}</h1>
         <EmployeeList employees={employees} ToggleAvailability={this._toggleAvailability} />
-        <AddEmployee newEmployee={newEmployee} AddNewEmployee={this._addNewEmployee} errors={errors} />
+        <AddEmployee
+          newEmployee={newEmployee}
+          AddNewEmployee={this._addNewEmployee}
+          errors={errors}
+          ref={this.textInput}
+        />
       </>
     );
   }

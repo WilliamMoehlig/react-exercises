@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function GenericForm({ type, name, value, update }) {
+function GenericForm({ type, name, value, update, reference }) {
   return (
     <div className="form-group">
       <label htmlFor={name}>{name.charAt(0).toUpperCase() + name.slice(1)}</label>
@@ -12,6 +12,7 @@ function GenericForm({ type, name, value, update }) {
         placeholder={`Enter ${name}`}
         value={value === 0 ? '' : value}
         onChange={e => update(name, e.target.value)}
+        ref={reference}
       />
     </div>
   );

@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: cyan;
+  border: 5px hotpink;
+  border-style: dashed;
+  height: 98%;
+  width: 99.3%;
+}
+
+.App {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-right: 100px;
+  background-color: hotpink;
+  color: cyan;
+  overflow: scroll;
+  max-height: calc(50vh - 20px);
+}
+
+@keyframes bounce {
+  from {
+    display: hidden;
+  }
+  to {
+    display: block;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.employee-available {
+  color: lime;
+}
+.employee-unavailable {
+  color: crimson;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+button {
+  background-color: cyan;
+  color: hotpink;
+}
+
+.img-gif {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-gif img {
+  border-radius: 50px;
+  animation: bounce 2s infinite;
+}

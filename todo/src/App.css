@@ -1,0 +1,44 @@
+.App {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.todo-container {
+  background-color: white;
+  height: 200px;
+  width: 600px;
+}
+
+.todo-title {
+  position: relative;
+  margin-top: -10%;
+  color: palevioletred;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.todo-text {
+  width: 90%;
+  height: 80%;
+}

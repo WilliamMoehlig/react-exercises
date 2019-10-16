@@ -9,7 +9,8 @@
     "clean": "rimraf dist",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "start": "webpack-dev-server --open",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "MIT",
